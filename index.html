@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diseño de experimentos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cómo planear un experimento para que los datos respondan la pregunta: replicación, bloqueo y aleatorización, el modelo de rango incompleto, diseños completamente aleatorizados, en bloques, cuadrados latinos y bloques incompletos, factoriales 2ⁿ y 3ⁿ, confusión, fracciones, parcelas divididas y superficies de respuesta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html">Diseño de <b>experimentos</b></a><span class="eyebrow">Curso visual e interactivo · Matemática</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<p class="aviso-curado" role="note">El material de Matemática está en proceso de curado: puede tener errores.</p>
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Matemática</span>
+  <h1>El mejor análisis no salva un experimento mal planeado</h1>
+  <p class="lede">Una panadería quiere saber qué harina, cuánta levadura y qué temperatura dan el pan más alto, pero tiene dos hornos que no calientan igual y cada día la humedad cambia. Si prueba sin un plan, nunca sabrá si la diferencia viene de la receta, del horno o del día. El diseño de experimentos decide antes de hornear qué combinaciones probar, en qué orden y en qué horno, para que el análisis separe cada efecto con el menor número de pruebas. Este curso lo construye sobre el modelo lineal, con las demostraciones y con laboratorios donde se arman los diseños y se ve qué se puede estimar.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 12 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de estadística, agronomía, ingeniería y ciencias, y para quien diseña pruebas A/B o ensayos de laboratorio. Conviene haber leído Modelos lineales: la proyección, la hipótesis lineal general, las comparaciones múltiples de Tukey y Scheffé y los efectos aleatorios se usan sin repetirlos. La pseudoinversa está en Álgebra lineal avanzada y la combinatoria de los cuadrados latinos usa lo de Matemáticas discretas.</p>
+    <p><b>Cómo está hecho.</b> Una misma panadería recorre el curso: primero compara tres harinas, luego bloquea por horno y por día, después cruza harina, levadura y temperatura, y al final busca la receta óptima. Cada capítulo presenta un diseño con su descripción, cuándo usarlo, cómo se aleatoriza, su análisis y sus ventajas y desventajas. Los laboratorios dejan armar el diseño (asignar tratamientos a parcelas, construir un cuadrado latino, elegir generadores de una fracción) y mirar qué efectos quedan estimables o confundidos. Las prácticas usan R (`aov`, `FrF2`, `rsm`) o Python (`statsmodels`, `pyDOE3`).</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> Principios</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="metodo-experimental"><span class="n">01</span><b>El método experimental: replicación, bloqueo y aleatorización</b><p>Los tres principios de Fisher y el vocabulario de todo diseño.</p></div>
+    <div class="mod soon" data-id="modelo-de-rango-incompleto"><span class="n">02</span><b>El modelo lineal asociado al diseño: rango incompleto y funciones estimables</b><p>En un diseño, la matriz X no tiene rango completo: no todo se puede estimar, pero los contrastes sí.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Controlar el ruido</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="completamente-aleatorizado"><span class="n">03</span><b>El diseño completamente aleatorizado</b><p>Tratamientos asignados al azar a unidades homogéneas, el análisis de la varianza de un factor y el tamaño de muestra.</p></div>
+    <div class="mod soon" data-id="bloques-completos-al-azar"><span class="n">04</span><b>El diseño en bloques completos al azar</b><p>Agrupar las unidades por horno o por día y aleatorizar dentro de cada grupo para quitar esa variación del error.</p></div>
+    <div class="mod soon" data-id="cuadrados-latinos"><span class="n">05</span><b>El diseño en cuadrados latinos y sus generalizaciones</b><p>Dos fuentes de variación bloqueadas a la vez con un arreglo donde cada tratamiento aparece una vez por fila y por columna.</p></div>
+    <div class="mod soon" data-id="bloques-incompletos"><span class="n">06</span><b>Diseños en bloques incompletos</b><p>Cuando no caben todos los tratamientos en un bloque: diseños balanceados y parcialmente balanceados.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Varios factores a la vez</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="factoriales-de-dos-y-tres-factores"><span class="n">07</span><b>Diseño de tratamientos con dos y tres factores</b><p>Cruzar todos los niveles para estimar efectos principales e interacciones con las mismas unidades.</p></div>
+    <div class="mod soon" data-id="factoriales-2n-3n"><span class="n">08</span><b>Diseños factoriales 2ⁿ, 3ⁿ y pⁿ</b><p>Factores con dos o tres niveles: notación, efectos como contrastes y el algoritmo de Yates.</p></div>
+    <div class="mod soon" data-id="confusion"><span class="n">09</span><b>Diseños factoriales confundidos</b><p>Partir un factorial en bloques sacrificando una interacción alta que se confunde con los bloques.</p></div>
+    <div class="mod soon" data-id="factoriales-fraccionales"><span class="n">10</span><b>Diseños factoriales fraccionales</b><p>Correr solo una fracción del factorial y aceptar que unos efectos se confundan con otros.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Diseños para el mundo real</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="factores-aleatorios-y-parcelas-divididas"><span class="n">11</span><b>Factores aleatorios, anidados y parcelas divididas</b><p>Cuando un factor es difícil de cambiar o es una muestra de muchos posibles, el diseño tiene dos tamaños de error.</p></div>
+    <div class="mod soon" data-id="superficies-de-respuesta"><span class="n">12</span><b>Superficies de respuesta y la búsqueda del óptimo</b><p>Experimentar en secuencia para subir por la superficie hasta la mejor receta.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/mate-diseno-de-experimentos" target="_blank" rel="noopener">github.com/aaramirez/mate-diseno-de-experimentos</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
